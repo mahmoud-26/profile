@@ -231,7 +231,7 @@ nav ion-icon:hover {
 /* desktop */
 @media (min-width: 900px) {
   body {
-    padding: 100px;
+    padding: 200px;
   }
   nav {
     width: 70%;
