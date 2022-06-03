@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root {
+  --purple: mediumpurple;
+  --black: hsl(219, 48%, 8%);
+  --gray: rgb(21, 28, 40);
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--black);
+}
+/* navbar */
+nav {
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px 10px 5px 10px;
+  border-radius: 10px;
+  background: var(--gray);
+  opacity: 0.95;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 5px;
+  position: fixed;
+  bottom: -40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  box-shadow: 0 2px 2px 0 #2E3043;
+}
+nav ion-icon {
+  font-size: 20px;
+  padding: 16px 20px;
+  color: #FFFFFF;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+nav ion-icon:hover {
+  color: #FFFFFF;
+  background: var(--purple);
+}
+/* navbar */
+/* about */
+.about-area {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+}
+.about-area h1 {
+  text-align: center;
+  color: #FFFFFF;
+}
+.about-area p {
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+.about-area span {
+  transition: color 1s;
+  z-index: 999;
+}
+.about-area .html-card, .css-card, .js-card {
+  width: 100%;
+  padding: 30px;
+  background: var(--gray);
+  border-radius: 5px;
+  color: #FFFFFF;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.about-area ion-icon {
+  font-size: 20px;
+  margin-right: 20px;
+  transition: color 1s;
+  z-index: 999;
+}
+.about-area .html-card ion-icon {
+  color: #DD2424;
+}
+.about-area .css-card ion-icon {
+  color: #246ADD;
+}
+.about-area .js-card ion-icon {
+  color: gold;
+}
+.about-area .html-card::before {
+  content: '';
+  width: 5px;
+  height: 100%;
+  background: #DD2424;
+  position: absolute;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+.about-area .css-card::before {
+  content: '';
+  width: 5px;
+  height: 100%;
+  background: #246ADD;
+  position: absolute;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+.about-area .js-card::before {
+  content: '';
+  width: 5px;
+  height: 100%;
+  background: gold;
+  position: absolute;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+.about-area div:hover::before {
+  width: 100%;
+}
+.about-area div:hover span {
+  color: #000000;
+}
+.about-area div:hover ion-icon {
+  color: #000000;
+}
+/* about */
+/* projects */
+.projects-area {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+}
+.projects-area h1 {
+  text-align: center;
+  color: #FFFFFF;
+}
+.projects-area .projects {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.projects .project {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--gray);
+  color: gray;
+}
+/* projects */
+/* contact */
+.contact-area {
+  width: 100%;
+  height: 100vh;
+  padding: 10px 20px 50px 20px;
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+}
+.contact-area input:not(:first-of-type), textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid #BABABA;
+  border-radius: 5px;
+  outline: none;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+.contact-area input:first-of-type {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid #BABABA;
+  border-radius: 5px;
+  outline: none;
+  color: #FFFFFF;
+}
+.contact-area textarea {
+  height: 200px;
+}
+.contact-area label {
+  background: var(--black);
+  padding: 0 5px;
+}
+.contact-area .name {
+  position: absolute;
+  left: 30px;
+  top: 80px;
+}
+.contact-area .email {
+  position: absolute;
+  left: 30px;
+  top: 165px;
+}
+.contact-area .message {
+  position: absolute;
+  left: 30px;
+  top: 245px;
+}
+.contact-area button {
+  margin: 20px auto 100px auto;
+  padding: 15px 20px;
+  color: #FFFFFF;
+  background: var(--gray);
+  border: none;
+  border-radius: 5px;
+}
+/* contact */
+/* footer */
+.footer {
+  width: 100%;
+  padding: 20px 20px 100px 20px;
+  background: var(--gray);
+}
+.footer h6 {
+  color: #E0E0E0;
+  text-align: center;
+}
+/* footer */
+/* desktop */
+@media (min-width: 900px) {
+  body {
+    padding: 100px;
+  }
+  nav {
+    width: 70%;
+  }
+}
+/* desktop */
