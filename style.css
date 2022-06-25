@@ -155,6 +155,9 @@ nav ion-icon:hover {
   background: var(--gray);
   color: gray;
 }
+.projects .project:active {
+  box-shadow: 0 0 3px 0 var(--purple);
+}
 .project ion-icon {
   font-size: 50px;
 }
